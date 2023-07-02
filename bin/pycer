@@ -1,0 +1,5 @@
+#!/bin/bash
+
+EXEC_DIR="/mnt/d/harish/Programming/Python/pycer/"
+
+python3 $EXEC_DIR/pycer.py "$@"
