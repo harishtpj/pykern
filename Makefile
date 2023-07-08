@@ -11,6 +11,10 @@ all: kernel os.iso
 
 dev: kernel.cpp
 
+run: kernel os.iso
+	@echo "--> Running kernel"
+	@python.exe run_iso.py
+
 
 kernel: $(OBJECTS)
 	@ld $(LDFLAGS) $(OBJECTS) -o iso/boot/kernel
@@ -41,4 +45,4 @@ os.iso: kernel
 	@echo "--> Compiled $<"
 
 clean:
-	@rm -rf *.o iso/boot/kernel os.iso *.cpp
+	@rm -rf *.o iso/boot/kernel os.iso *.cpp *.log

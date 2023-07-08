@@ -1,12 +1,8 @@
 # A Simple kernel program written in Python.
 
-"""
-c #define VID_MEM (char*) 0xb8000
-"""
-
 def kmain() -> int:
-    msg: "const char*" = 'Hello, World!, This is pykernos written in Python. Version 2.0'
-    vidptr: "char*" =  VID_MEM
+    msg: const__char__link = 'Hello, World!, This is pykernos written in Python. Version 2.0'
+    vidptr: char__link =  ptr(char, 0xb8000)
     i: unsigned__int = 0
     j: unsigned__int = 0
 
